@@ -3,6 +3,7 @@ body
     z-index: 2;
     font-family: 'Roboto', cursive;
 }
+
 header
 {
     z-index: 1;
@@ -337,4 +338,10 @@ a:hover{color:inherit}
 {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 700px) { 
+    header {
+        background-color:orange;
+}
 }
