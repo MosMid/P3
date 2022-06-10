@@ -2,8 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ohmyfood</title>
     <script src="https://kit.fontawesome.com/7611533170.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
@@ -13,24 +15,29 @@
     <header>
         <p id="logo">ohmyfood</p>
     </header>
-    <div id="loader"></div>
-    <div class="fade-in">
+    <div id="tlocalisation"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Paris, Belleville"></div>
+    <div class="all">
+    <aside>
+    <div class="fade-out"><div class="loader"></div></div>
+    <div class="tnav fade-in">
     <nav>
         <div id="localisation"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Paris, Belleville"></div>
         <h1>Reservez le menu qui<br>vous convient</h1>
         <p>Découvrez des restaurants d'exeption,<br>selectionnés par nos soins</p>
         <button>Explorez nos restaurants</button>
     </nav>
-    <section >
-        <h1 class="fon">Fonctionnement</h1>
+    <section>
+        <h1>Fonctionnement</h1>
         <div class="fonction"><div class="number"><p>1</p></div><p class="fontext"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</p></div>
         <div class="fonction"><div class="number"><p>2</p></div><p class="fontext"><i class="fa-solid fa-list"></i>Composez votre menu</p></div>
         <div class="fonction"><div class="number"><p>3</p></div><p class="fontext"><i class="fa-solid fa-store"></i>Dégustez au restaurant</p></div>
     </section>
     </div>
-    <div class="fade-in">
-    <main>
-        <h1>Restaurants</h1>   
+    </aside>
+    <div class="tmain">
+    <main class="fade-in">
+        <h1>Restaurants</h1> 
+        <div class="carteliste"> 
         <div class="carte">
             <a href="lapalettedugout.html"></a>
             <div class="cadre">
@@ -91,14 +98,18 @@
                 </label>
             </div>
         </div>
+        </div> 
     </main>
+    </div>
     </div>
     <footer>
         <h3>ohmyfood</h3>
+        <div class="blyat">
         <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
         <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
         <p>Mentions légales</p>
         <p>Contact</p>
+        </div>
     </footer>
 </body>
 </html>

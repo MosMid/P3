@@ -2,11 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Alafrancaise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lapalettedugout</title>
     <script src="https://kit.fontawesome.com/7611533170.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
     <link href="style2.css" rel="stylesheet" />
 </head>
 <body>
@@ -16,6 +18,7 @@
     </header>
     <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" id="arplan">
     <main>
+        <div class="all">
         <div class="blyat">
             <p class="nom">À la française</p>
             <div class="fav">
@@ -26,8 +29,9 @@
                 </label>
             </div>
         </div>
-        <section id="entrees">
-            <p class="titre">ENTRÉES</p>
+        <p class="titre nd">ENTRÉES</p>
+        <section id="entrees" class="dark">
+            <p class="titre d">ENTRÉES</p>
             <div class="item fade-in one">
                 <div class="hid">
                     <h1>Tartare de poulpe acidulé</h1>
@@ -56,8 +60,9 @@
                 </div>
             </div>
         </section>
+        <p class="titre fade-in four nd">PLATS</p>
         <section id="plats">
-            <p class="titre fade-in four">PLATS</p>
+            <p class="titre fade-in four d">PLATS</p>
             <div class="item fade-in five">
                 <div class="hid">
                     <h1>Coquilles Saint-Jaques</h1>
@@ -86,8 +91,9 @@
                 </div>
             </div>
         </section>
-        <section id="desserts">
-            <p class="titre fade-in eight">DESSERTS</p>
+        <p class="titre fade-in eight nd">DESSERTS</p>
+        <section id="desserts" class="dark">
+            <p class="titre fade-in eight d">DESSERTS</p>
             <div class="item fade-in nine">
                 <div class="hid">
                     <h1>Pétale de violettes glacés</h1>
@@ -117,13 +123,15 @@
             </div>
         </section>
         <div class="bouton"><button>Commander</button></div>
+    </div>
         <footer>
-            <img id="flogo" src="" alt="">
             <h3>ohmyfood</h3>
+            <div class="foot">
             <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
             <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
             <p>Mentions légales</p>
             <p>Contact</p>
+            </div>
         </footer>
     </main>
 </body>
