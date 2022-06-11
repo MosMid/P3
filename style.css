@@ -1,0 +1,820 @@
+.box 
+{
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+}
+
+a {text-decoration: none;}
+a:link{color:inherit}
+a:active{color:inherit}
+a:visited{color:inherit}
+a:hover{color:inherit}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin 
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader 
+{
+    z-index: 0;
+    position: absolute;
+    top: calc(50vh - 60px);
+    left: calc(50% - 60px);
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #9356DC;
+    border-bottom: 16px solid #FF79DA;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+.fade-out
+{
+    opacity: 1;
+    -webkit-animation:fadeOut ease-in 1s;
+    -moz-animation:fadeOut ease-in 1s;
+    animation:fadeOut ease-in 1s;
+  
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation-duration:0.2s;
+    -moz-animation-duration:0.2s;
+    animation-duration:0.2s;
+
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.fade-in 
+{
+    opacity: 0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+  
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation-duration:0.2s;
+    -moz-animation-duration:0.2s;
+    animation-duration:0.2s;
+
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+body
+{
+    z-index: 1;
+    font-family: 'Roboto', cursive; 
+    background-color: white;
+}
+header
+{
+    margin: auto;
+}
+#tlocalisation
+{
+    display: none;
+}
+#logo
+{
+    font-family: 'Shrikhand', sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+nav
+{
+    margin: auto;
+}
+#localisation
+{
+    position: relative;
+}
+#localisation i
+{
+    cursor: pointer;
+    position: absolute;
+    left: calc(50% - 130px);
+}
+input
+{
+    position: relative;
+    border:0;
+    outline:0;
+    background-color: #eaeaea;
+}
+button
+{
+    background: #FF79DA;
+    font-weight: 500;
+    width: auto;
+    border: none;
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    color: white;
+    box-shadow: 5px 10px 18px #d2d1d1;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+button:active
+{
+    transform: scale(0.98);
+    background: linear-gradient(170deg, #fe8cdd, #a578dc);
+    box-shadow: 5px 10px 18px #a1a1a1;
+}
+section
+{
+    margin: auto;
+}
+main
+{
+    margin: auto;
+}
+.fonction
+{
+    position: relative;
+    height: auto;
+    margin: auto;
+    background-color: #eaeaea;
+    box-shadow: 5px 10px 18px #d2d1d1;
+}
+.fontext
+{
+    display: inline;
+    font-weight: 500;
+}
+.number
+{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: #9356DC;
+    left: -20px;
+    top: calc(50% - 25px);
+}
+.number p
+{
+    position: absolute;
+    top: -23px;
+    left: 16px;
+    font-weight: 500;
+    color: white;
+}
+main
+{
+    width: 90%;
+}
+.carte
+{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 5px 10px 18px #d2d1d1;
+}
+.carte a
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.cadre
+{
+    width: 100%;
+    height: 250px;
+    border-radius: 30px 30px 0 0;
+}
+.photo
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+}
+.carte h2
+{
+    margin-left: 5%;
+}
+.carte p
+{
+    font-weight: 300;
+    margin-left: 5%;
+}
+footer
+{
+    background-color: #353535;
+    color: #e8e8e8;
+    padding-bottom: 50px;
+}
+footer h3
+{
+    
+    padding-left: 5%;
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+footer p
+{
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5%;
+}
+footer p:hover
+{
+  text-decoration: underline;
+}
+footer p:active
+{
+  text-decoration: underline;
+}
+footer p i
+{
+    margin-left: 0;
+}
+.fav
+{
+    position: absolute;
+    left: 82%;
+    top: 280px;
+}
+.switch 
+{
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input 
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider 
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 3px;
+    font-size: 30px;
+    color: #f6f6f6;
+}
+input:checked + .slider 
+{
+    color: transparent;
+}
+.on
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 36px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s;
+}
+.off
+{
+    transition: all 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+    aside
+    {
+        background-color: #f6f6f6;
+    }
+    header
+    {
+        background-color: white;
+    }
+    #logo
+    {
+        font-size: 42px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    nav
+    {
+        text-align: center;
+    }
+    #tlocalisation
+    {
+        display: none;
+    }
+    #localisation
+    {
+        position: relative;
+        height: 50px;
+        background-color: #eaeaea;
+        text-align: center;
+    }
+    #localisation i
+    {
+        top: 14px;
+    }
+    input
+    {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    nav h1
+    {
+        font-size: 28px;
+    }
+    nav p
+    {
+        font-size: 18px;
+        font-weight: 100;
+    }
+    button
+    {
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 24px;
+    }
+    section
+    {
+        margin-top: 50px;
+        padding-top: 30px;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: white;
+    }
+    section h1
+    {
+        margin-bottom: 0;
+        font-size: 26px;
+    }
+    .fonction
+    {
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .fonction p i
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .number
+    {
+        height: 30px;
+        width: 30px;
+        border-radius: 15px;
+        left: -15px;
+        top: calc(50% - 15px);
+    }
+    .number p
+    {
+        left: 10px;
+        top: -15px;
+    }
+    main
+    {
+        padding-bottom: 30px;
+    }
+    .carte
+    {
+        margin-bottom: 30px;
+    }
+    .carte h2
+    {
+        margin-bottom: 0;
+    }
+    .carte p
+    {
+        font-size: 20px;
+    }
+    footer
+    {
+        padding-top: 20px;
+    }
+    footer p
+    {
+        font-size: 20px;
+    }
+    footer p i
+    {
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px){
+
+    #localisation
+    {
+        display: none;
+    }
+    #tlocalisation
+    {
+        display: block;
+        position: relative;
+        height: 50px;
+        background-color: #eaeaea;
+        text-align: center;
+    }
+    .tnav
+    {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f6f6f6;
+    }
+    #logo
+    {
+        font-size: 36px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    nav
+    {
+        width: 50%;
+        text-align: center;
+        border-right: #eaeaea;
+    }
+    section
+    {
+        width: 50%;
+        margin-top: 0;
+        text-align: center;
+        border-left: 20px solid #eaeaea;
+    }
+    #tlocalisation i
+    {
+        position: absolute;
+        top: 15px;
+        z-index: 1;
+        cursor: pointer;
+    }
+    input
+    {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    nav h1
+    {
+        margin-top: 0;
+        font-size: 28px;
+    }
+    nav p
+    {
+        font-size: 18px;
+        font-weight: 100;
+    }
+    button
+    {
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 24px;
+    }
+    section h1
+    {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+    .fonction
+    {
+        width: 70%;
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+    .fonction i
+    {
+        margin-right: 7%;
+    }
+    .number
+    {
+        height: 24px;
+        width: 24px;
+        border-radius: 12px;
+        left: -12px;
+        top: calc(50% - 12px);
+    }
+    .number p
+    {
+        left: 8px;
+        top: -13px;
+    }
+    main
+    {
+        width: 100%;
+    }
+    main h1
+    {
+        margin-left: 5%;
+    }
+    .carteliste
+    {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .carte
+    {
+        width: 40%;
+        margin-bottom: 40px;
+    }
+    .carte h2
+    {
+        margin-bottom: 0;
+    }
+    .carte p
+    {
+        font-size: 20px;
+    }
+    footer
+    {
+        padding-top: 5px;
+        padding-bottom: 50px;
+    }
+    footer h3
+    {
+        font-size: 22px;
+        margin-left: -2%;
+    }
+    .blyat
+    {
+        margin-left: 2%;
+        margin-top: -15px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .blyat p
+    {
+        font-size: 16px;
+        margin-bottom: -5px;
+    }
+    .blyat p i
+    {
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    body
+    {
+        max-width: 1600px;
+        margin: auto;
+    }
+    #tlocalisation
+    {
+        display: none;
+    }
+    .all 
+    {
+      display: flex;
+    }
+    header
+    {
+        border-bottom: 10px solid #eaeaea;
+    }   
+    aside
+    {
+        width: 30%;
+        background-color: #f6f6f6;
+    }
+    .tmain
+    {
+        width: 70%;
+    }
+    #logo
+    {
+        font-size: 64px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    nav
+    {
+        text-align: center;
+    }
+    #localisation
+    {
+        position: relative;
+        height: 50px;
+        background-color: #eaeaea;
+        text-align: center;
+    }
+    #localisation i
+    {
+        top: 14px;
+    }
+    input
+    {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    nav h1
+    {
+        margin-top: 40px;
+        font-size: 28px;
+    }
+    nav p
+    {
+        font-size: 16px;
+        font-weight: 100;
+    }
+    button
+    {
+        font-size: 22px;
+        padding: 25px;
+        border-radius: 36px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    button:hover
+    {
+        background: linear-gradient(170deg, #fe8cdd, #a578dc);
+        box-shadow: 5px 10px 18px #a1a1a1;
+    }
+    section
+    {
+        margin-top: 0px;
+        padding-top: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: #f6f6f6;
+    }
+    section h1
+    {
+        margin-bottom: 50px;
+        font-size: 28px;
+        text-align: center;
+    }
+    .fonction
+    {
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 25px;
+        border-radius: 10px;
+    }
+    .fonction p i
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .number
+    {
+        height: 34px;
+        width: 34px;
+        border-radius: 17px;
+        left: -17px;
+        top: calc(50% - 17px);
+    }
+    .number p
+    {
+        left: 12px;
+        top: -11px;
+    }
+    main h1
+    {
+        font-size: 28px;
+        margin-left: 5%;
+        padding-bottom: 15px;
+    }
+    .carteliste
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .carte
+    {
+        width: 45%;
+        margin-bottom: 30px;
+        transition: 0.4s;
+    }
+    .carte:hover 
+    {
+        filter: brightness(108%);
+        box-shadow: 5px 10px 18px #a1a1a1;
+    }
+    .carte:active 
+    {
+        transform: scale(.95);
+    }
+    .cadre
+    {
+        height: 300px;
+    }
+    .carte h2
+    {
+        margin-top: 15px;
+        margin-bottom: -10px;
+        font-size: 22px;
+    }
+    .carte p
+    {
+        font-size: 16px;
+    }
+    .fav
+    {   
+        position: absolute;
+        left: 82%;
+        top: 320px;
+    }
+    .switch 
+    {
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .switch input 
+    {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider 
+    {
+        position: absolute;
+        cursor: pointer;
+        top: 1px;
+        left: 2px;
+        font-size: 20px;
+        color: #f6f6f6;
+    }
+    input:checked + .slider 
+    {
+        color: transparent;
+    }
+    .on
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 24px;
+        background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.4s;
+    }
+    .off
+    {
+        transition: all 0.4s;
+    }
+    .fa-heart:hover
+    {
+        color: #fbafe5;
+    }
+    footer
+    {
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+    footer h3
+    {
+        font-size: 22px;
+        margin-left: -2%;
+    }
+    .blyat
+    {
+        margin-left: 2%;
+        margin-top: -15px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .blyat p
+    {
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+    .blyat p i
+    {
+        margin-right: 5%;
+    }
+}
