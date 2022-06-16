@@ -1,3 +1,4 @@
+/*guelb*/
 a {text-decoration: none;}
 a:link{color:inherit}
 a:active{color:inherit}
@@ -388,9 +389,34 @@ footer p i
   }
   section
   {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .titre
+  {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  .titre::before
+  {
+    width: 72px;
+    left: calc(50% - 36px);
+  }
+  .titre::after
+  {
+    position: absolute;
+    content: '';
+    background: #99e2d0;
+    height: 3px;
+    width: 52px;
+    top: 40px;
+    left: calc(50% - 26px);
+  }
+  .item
+  {
+    width: 48%;
   }
   .foot
   {
@@ -407,67 +433,31 @@ footer p i
     max-width: 1600px;
     margin: auto;
   }
-  .all
-  {
-    margin-left: 400px;
-    padding-top: 100px;
-  }
-  .blyat
-  {
-    position: relative;
-  }
-  .nom
-  {
-    position: absolute;
-    top: -120px;
-    left: -400px;
-  }
-  .fav
-  {
-    top: -70px;
-    left: -50px;
-
-  }
-  .fa-heart:hover
-  {
-    color: #fbafe5;
-  }
-  .nd
-  {
-    display: none;
-  }
-  .d
-  {
-    display: block;
-  }
-  section
-  {
-    position: relative;
-    margin-bottom: 30px;
-  }
   .titre
   {
-    position: absolute;
-    left: -400px;
+    text-align: left;
+    margin-left: 5%;
+    position: relative;
+    font-size: 22px;
+    font-weight: 300;
   }
   .titre::before
   {
-    height: 3px;
-    width: 55px;
-  }
-  .dark::before
-  {
     position: absolute;
     content: '';
-    background: #f6f6f6;
-    width: calc(100% + 400px);
-    height: 290px;
-    top: 0px;
-    left: -400px;
+    background: #99e2d0;
+    height: 3px;
+    width: 55px;
+    top: 30px;
+    left: 0;
   }
-  button
+  .titre::after
   {
-    margin-left: -300px;
+    display: none;
+  }
+  .item
+  {
+    width: 32%;
   }
   .foot
   {
