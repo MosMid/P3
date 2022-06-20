@@ -656,9 +656,29 @@ input:checked + .slider
         margin-top: 40px;
         margin-bottom: 50px;
     }
-    .function
+    .fonction
     {
-        font-size: 18px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-radius: 20px;
+    }
+    .fontext
+    {
+        font-size: 24px;
+    }
+    .number
+    {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        left: -20px;
+        top: calc(50% - 20px);
+    }
+    .number p
+    {
+        font-size: 22px;
+        left: 13px;
+        top: -15px;
     }
     main h1
     {
